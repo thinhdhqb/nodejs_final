@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "65704be6adc8259b6319a8e3"
+  },
+  "email": "admin@gmail",
+  "username": "admin",
+  "password": "$2b$10$Qgp69sOxzbyImRFfqo9o1uUCKbZJwuUpAcDHYTqS8g1A.1UAu18gq",
+  "__v": 0,
+  "role": "admin",
+  "profileImg": "image-1702222471653-361386965.jpg"
+},
+{
+  "_id": {
+    "$oid": "6571d788a6da5d2ea143e797"
+  },
+  "email": "thinhdhqb@gmail.com",
+  "username": "thinhdhqb",
+  "profileImg": "image-1702177610379-918795722.jpg",
+  "password": "$2b$10$p/VUY7ZXNlVmomvbhkHqN.YM1mcz2zlUbjYUFPpoMWO0PF2dzu6Bi",
+  "role": "employee",
+  "__v": 0
+}]

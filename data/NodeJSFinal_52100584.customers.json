@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6574538c709ae7924ec2d7d6"
+  },
+  "phoneNumber": "0123123123",
+  "fullName": "Bùi Quang Thịnh",
+  "address": "123 Nguyễn Hữu Thọ, Phường Lê Hồng Phong, Thành phố Thái Bình, Tỉnh Thái Bình",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575d1fedaf0b73f3b49fdc1"
+  },
+  "phoneNumber": "0123321321",
+  "fullName": "Kiều Cao Minh Kiệt",
+  "address": "1 Lê Lợi, Phường Lê Hồng Phong, Thành phố Thái Bình, Tỉnh Thái Bình",
+  "__v": 0
+}]

@@ -1,0 +1,1008 @@
+[{
+  "_id": {
+    "$oid": "657532ee93a323eebff09f8d"
+  },
+  "barcode": "336138177",
+  "name": "Điện thoại iPhone 12 64GB",
+  "importPrice": 13190000,
+  "retailPrice": 14890000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T03:39:26.245Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575333f93a323eebff09f90"
+  },
+  "barcode": "763468725",
+  "name": "Điện thoại iPhone 15 Pro Max 256GB",
+  "importPrice": 33690000,
+  "retailPrice": 34990000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T03:40:47.937Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575337893a323eebff09f93"
+  },
+  "barcode": "673235444",
+  "name": "Điện thoại iPhone 15 Plus 128GB ",
+  "importPrice": 25790000,
+  "retailPrice": 28190000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T03:41:44.299Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575339193a323eebff09f96"
+  },
+  "barcode": "111949667",
+  "name": "Điện thoại iPhone 15 128GB",
+  "importPrice": 21990000,
+  "retailPrice": 23990000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T03:42:09.449Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657533bd93a323eebff09f99"
+  },
+  "barcode": "152683218",
+  "name": "Điện thoại iPhone 14 Pro Max 128GB",
+  "importPrice": 27490000,
+  "retailPrice": 29490000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:42:53.693Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657533e693a323eebff09f9c"
+  },
+  "barcode": "712515928",
+  "name": "Điện thoại iPhone 11 128GB",
+  "importPrice": 12290000,
+  "retailPrice": 13390000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:43:34.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575341993a323eebff09f9f"
+  },
+  "barcode": "255923331",
+  "name": "Điện thoại iPhone 14 Pro 128GB ",
+  "importPrice": 25190000,
+  "retailPrice": 27090000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T03:44:25.256Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575344493a323eebff09fa2"
+  },
+  "barcode": "927962335",
+  "name": "Điện thoại iPhone 14 Plus 128GB",
+  "importPrice": 21990000,
+  "retailPrice": 23690000,
+  "category": "phone",
+  "brand": "apple",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T03:45:08.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575350d822ea6bd250a1fcd"
+  },
+  "barcode": "729569911",
+  "name": "Điện thoại Xiaomi 13T Pro 5G",
+  "importPrice": 14490000,
+  "retailPrice": 15990000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T03:48:29.413Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575352c822ea6bd250a1fd0"
+  },
+  "barcode": "824726616",
+  "name": "Điện thoại Xiaomi Redmi 12 4GB ",
+  "importPrice": 3490000,
+  "retailPrice": 4290000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T03:49:00.305Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575354a822ea6bd250a1fd3"
+  },
+  "barcode": "574829182",
+  "name": "Điện thoại Xiaomi Redmi A2+",
+  "importPrice": 2390000,
+  "retailPrice": 3190000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:49:30.379Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753574822ea6bd250a1fd6"
+  },
+  "barcode": "232442668",
+  "name": "Điện thoại Xiaomi 12 5G ",
+  "importPrice": 9490000,
+  "retailPrice": 13490000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:50:12.816Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753596822ea6bd250a1fd9"
+  },
+  "barcode": "828917699",
+  "name": "Điện thoại Xiaomi 13 Lite 5G",
+  "importPrice": 8990000,
+  "retailPrice": 11490000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T03:50:46.004Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657535af822ea6bd250a1fdc"
+  },
+  "barcode": "918245636",
+  "name": "Điện thoại Xiaomi Redmi 12 8GB",
+  "importPrice": 3890000,
+  "retailPrice": 4790000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T03:51:11.716Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657535cc822ea6bd250a1fdf"
+  },
+  "barcode": "584961235",
+  "name": "Điện thoại Xiaomi Redmi 13C 4GB",
+  "importPrice": 2890000,
+  "retailPrice": 3290000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T03:51:40.321Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575367d822ea6bd250a1fe2"
+  },
+  "barcode": "937388493",
+  "name": "Điện thoại Xiaomi Redmi 12C 128GB ",
+  "importPrice": 2790000,
+  "retailPrice": 3290000,
+  "category": "phone",
+  "brand": "xiaomi",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T03:54:37.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657536ca822ea6bd250a1fe7"
+  },
+  "barcode": "719772539",
+  "name": "Điện thoại Samsung Galaxy A05s 6GB",
+  "importPrice": 4090000,
+  "retailPrice": 4990000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T03:55:54.776Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753705822ea6bd250a1fed"
+  },
+  "barcode": "632757712",
+  "name": "Điện thoại Samsung Galaxy M54 5G",
+  "importPrice": 10490000,
+  "retailPrice": 11990000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:56:53.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753769822ea6bd250a1ff0"
+  },
+  "barcode": "582883874",
+  "name": "Điện thoại Samsung Galaxy A05s 4GB",
+  "importPrice": 3690000,
+  "retailPrice": 3990000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:58:33.963Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753790822ea6bd250a1ff3"
+  },
+  "barcode": "217126259",
+  "name": "Điện thoại Samsung Galaxy A05 4GB ",
+  "importPrice": 3090000,
+  "retailPrice": 3290000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T03:59:12.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657537e6822ea6bd250a1ff6"
+  },
+  "barcode": "489565637",
+  "name": "Điện thoại Samsung Galaxy S23 5G 128GB",
+  "importPrice": 14790000,
+  "retailPrice": 15990000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:00:38.865Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657538e0822ea6bd250a2002"
+  },
+  "barcode": "982875495",
+  "name": "Điện thoại Samsung Galaxy A34 5G 128GB",
+  "importPrice": 7490000,
+  "retailPrice": 8490000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:04:48.129Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753904822ea6bd250a2005"
+  },
+  "barcode": "456113354",
+  "name": "Điện thoại Samsung Galaxy S21 FE 5G (8GB/256GB)",
+  "importPrice": 11990000,
+  "retailPrice": 14090000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:05:24.536Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575397b822ea6bd250a2008"
+  },
+  "barcode": "659431922",
+  "name": "Điện thoại Samsung Galaxy A54 5G 256GB ",
+  "importPrice": 9470000,
+  "retailPrice": 11490000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:07:23.696Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753a42822ea6bd250a202b"
+  },
+  "barcode": "519216823",
+  "name": "Tai nghe Bluetooth True Wireless Samsung Galaxy Buds 2 Pro R510N ",
+  "importPrice": 3490000,
+  "retailPrice": 4990000,
+  "category": "earphone",
+  "brand": "samsung",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:10:42.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753a92822ea6bd250a202e"
+  },
+  "barcode": "153812787",
+  "name": "Tai nghe Bluetooth True Wireless Samsung Galaxy Buds 2 R177N",
+  "importPrice": 2990000,
+  "retailPrice": 3490000,
+  "category": "earphone",
+  "brand": "samsung",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:12:02.593Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753ab3822ea6bd250a2031"
+  },
+  "barcode": "729258878",
+  "name": "Tai nghe Có Dây Samsung IA500",
+  "importPrice": 280000,
+  "retailPrice": 350000,
+  "category": "earphone",
+  "brand": "samsung",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:12:35.109Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753b19822ea6bd250a203b"
+  },
+  "barcode": "337368917",
+  "name": "Tai Nghe AKG Samsung S10/S10 +/S10e",
+  "importPrice": 149000,
+  "retailPrice": 186000,
+  "category": "earphone",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:14:17.904Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753b57822ea6bd250a2043"
+  },
+  "barcode": "453619522",
+  "name": "Tai nghe Bluetooth AirPods Pro Gen 2 MagSafe Charge (USB-C) Apple MTJV3",
+  "importPrice": 5990000,
+  "retailPrice": 6200000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:15:19.571Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753b7c822ea6bd250a2046"
+  },
+  "barcode": "844181434",
+  "name": "Tai nghe Có Dây Apple MMTN2 ",
+  "importPrice": 550000,
+  "retailPrice": 610000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:15:56.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753bbe822ea6bd250a2049"
+  },
+  "barcode": "963489534",
+  "name": "Tai nghe Có Dây Apple MTJY3",
+  "importPrice": 550000,
+  "retailPrice": 610000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:17:02.976Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753bf8822ea6bd250a205a"
+  },
+  "barcode": "239626871",
+  "name": "Tai nghe Bluetooth AirPods 3 Lightning Charge Apple MPNY3 ",
+  "importPrice": 4090000,
+  "retailPrice": 4990000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:18:00.690Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753c20822ea6bd250a205d"
+  },
+  "barcode": "312856473",
+  "name": "Tai nghe Bluetooth AirPods Pro (2nd Gen) MagSafe Charge Apple MQD83 ",
+  "importPrice": 5790000,
+  "retailPrice": 6190000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:18:40.976Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753c4b822ea6bd250a2060"
+  },
+  "barcode": "329695199",
+  "name": "Tai nghe Bluetooth Chụp Tai AirPods Max Apple",
+  "importPrice": 12490000,
+  "retailPrice": 13990000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:19:23.769Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753c77822ea6bd250a2063"
+  },
+  "barcode": "813516998",
+  "name": "Tai nghe Bluetooth AirPods 2 Lightning Charge Apple MV7N2",
+  "importPrice": 2690000,
+  "retailPrice": 3490000,
+  "category": "earphone",
+  "brand": "apple",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:20:07.976Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753c9d822ea6bd250a206b"
+  },
+  "barcode": "729115621",
+  "name": "Tai nghe Bluetooth True Wireless Xiaomi Redmi Buds 4 Active",
+  "importPrice": 440000,
+  "retailPrice": 690000,
+  "category": "earphone",
+  "brand": "xiaomi",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:20:45.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753cbc822ea6bd250a206e"
+  },
+  "barcode": "756147166",
+  "name": "Tai nghe Bluetooth TWS Xiaomi Redmi Buds 4 Lite",
+  "importPrice": 540000,
+  "retailPrice": 7900000,
+  "category": "earphone",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:21:16.878Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753cf6822ea6bd250a2071"
+  },
+  "barcode": "591326219",
+  "name": "Tai nghe Bluetooth Xiaomi Gen 2 ",
+  "importPrice": 149000,
+  "retailPrice": 189000,
+  "category": "earphone",
+  "brand": "xiaomi",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:22:14.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753d25822ea6bd250a2074"
+  },
+  "barcode": "956896931",
+  "name": "Tai nghe Bluetooth True Wireless Xiaomi Buds 3T Pro",
+  "importPrice": 440000,
+  "retailPrice": 590000,
+  "category": "earphone",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:23:01.528Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753d40822ea6bd250a2077"
+  },
+  "barcode": "442527229",
+  "name": "Tai nghe Bluetooth True Wireless Earphones 2 Basic Xiaomi BHR4089GL",
+  "importPrice": 550000,
+  "retailPrice": 710000,
+  "category": "earphone",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:23:28.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753d65822ea6bd250a207a"
+  },
+  "barcode": "435881281",
+  "name": "Tai nghe Bluetooth True Wireless Xiaomi Earbuds Basic 2 BHR4272GL",
+  "importPrice": 460000,
+  "retailPrice": 590000,
+  "category": "earphone",
+  "brand": "xiaomi",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:24:05.118Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753dd7822ea6bd250a208e"
+  },
+  "barcode": "589776722",
+  "name": "Adapter Sạc Dual Type C 35W Apple MNWP3",
+  "importPrice": 1360000,
+  "retailPrice": 1490000,
+  "category": "charger",
+  "brand": "apple",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:25:59.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753dfe822ea6bd250a2091"
+  },
+  "barcode": "296999558",
+  "name": "Adapter Sạc Type C 20W dùng cho iPhone/iPad Apple MHJE3",
+  "importPrice": 550000,
+  "retailPrice": 610000,
+  "category": "charger",
+  "brand": "apple",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:26:38.608Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753ed5822ea6bd250a2094"
+  },
+  "barcode": "525994666",
+  "name": "Adapter Sạc 85W Apple Macbook Pro MC556",
+  "importPrice": 2240000,
+  "retailPrice": 2490000,
+  "category": "charger",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:30:13.011Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753f38822ea6bd250a2097"
+  },
+  "barcode": "772761184",
+  "name": "Bộ chuyển đổi chân sạc Adapter Kit Apple MD837",
+  "importPrice": 870000,
+  "retailPrice": 950000,
+  "category": "charger",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:31:52.457Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753f5f822ea6bd250a209a"
+  },
+  "barcode": "433533692",
+  "name": "Adapter Sạc Type C PD 25W Samsung EP-T2510N",
+  "importPrice": 495000,
+  "retailPrice": 550000,
+  "category": "charger",
+  "brand": "samsung",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:32:31.783Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753f74822ea6bd250a209d"
+  },
+  "barcode": "951249172",
+  "name": "Adapter Sạc Type C 15W Samsung EP-T1510N ",
+  "importPrice": 285000,
+  "retailPrice": 320000,
+  "category": "charger",
+  "brand": "samsung",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:32:52.631Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753f97822ea6bd250a20a0"
+  },
+  "barcode": "577712757",
+  "name": "Bộ Adapter sạc kèm cáp Type C - Type C PD 45W Samsung EP-T4510X",
+  "importPrice": 950000,
+  "retailPrice": 1190000,
+  "category": "charger",
+  "brand": "samsung",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:33:27.493Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753fbe822ea6bd250a20a3"
+  },
+  "barcode": "222563578",
+  "name": "Pin sạc dự phòng 10000 mAh Type C PD 25W Samsung EB-P3400",
+  "importPrice": 790000,
+  "retailPrice": 910000,
+  "category": "charger",
+  "brand": "samsung",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:34:06.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753fd7822ea6bd250a20a6"
+  },
+  "barcode": "947581993",
+  "name": "Pin sạc dự phòng 20.000 mAh Type C PD 25W Samsung EB-P5300",
+  "importPrice": 1190000,
+  "retailPrice": 1490000,
+  "category": "charger",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:34:31.335Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65753fff822ea6bd250a20a9"
+  },
+  "barcode": "423128976",
+  "name": "Bộ Adapter sạc kèm cáp Type C - Type C PD 25W Samsung EP-T2510XW",
+  "importPrice": 710000,
+  "retailPrice": 790000,
+  "category": "charger",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:35:11.963Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657540a1822ea6bd250a20ac"
+  },
+  "barcode": "532256177",
+  "name": "Ốp lưng MagSafe iPhone 15 Pro Max Nhựa cứng viền dẻo Spigen Crystal Hybrid MagFit ACS06450",
+  "importPrice": 909000,
+  "retailPrice": 1290000,
+  "category": "phoneCase",
+  "brand": "apple",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:37:53.830Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657540c6822ea6bd250a20af"
+  },
+  "barcode": "798567747",
+  "name": "Ốp lưng Magsafe iPhone 15 Pro Max Nhựa dẻo TPU LAUT HUEX PROTECT",
+  "importPrice": 666000,
+  "retailPrice": 749000,
+  "category": "phoneCase",
+  "brand": "apple",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:38:30.151Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657540f1822ea6bd250a20b2"
+  },
+  "barcode": "661868194",
+  "name": "Ốp lưng iPhone 15 Pro Nhựa cứng viền dẻo Spigen Ultra Hybrid ACS06713",
+  "importPrice": 419000,
+  "retailPrice": 529000,
+  "category": "phoneCase",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:39:13.365Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575410f822ea6bd250a20b5"
+  },
+  "barcode": "646491737",
+  "name": "Ốp lưng iPhone 14 Pro Max Nhựa dẻo TPU Spigen Liquid Crystal",
+  "importPrice": 315000,
+  "retailPrice": 425000,
+  "category": "phoneCase",
+  "brand": "apple",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T04:39:43.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575415c822ea6bd250a20b8"
+  },
+  "barcode": "892649314",
+  "name": "Ốp lưng iPhone 14 Nhựa cứng viền dẻo Laut SHIELD",
+  "importPrice": 303000,
+  "retailPrice": 505000,
+  "category": "phoneCase",
+  "brand": "apple",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:41:00.206Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575418d822ea6bd250a20bb"
+  },
+  "barcode": "392642126",
+  "name": "Ốp lưng Magsafe iPhone 15 Pro Max Nhựa cứng viền dẻo LAUT Holo",
+  "importPrice": 779000,
+  "retailPrice": 899000,
+  "category": "phoneCase",
+  "brand": "apple",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:41:49.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657541c8822ea6bd250a20c3"
+  },
+  "barcode": "786412353",
+  "name": "Ốp lưng Xiaomi Redmi A2 Nhựa dẻo TPU JM Cons Shock",
+  "importPrice": 70000,
+  "retailPrice": 90000,
+  "category": "phoneCase",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:42:48.413Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657541db822ea6bd250a20c6"
+  },
+  "barcode": "316214815",
+  "name": "Ốp lưng Xiaomi Poco C40 Nhựa dẻo Shockproof TPU JM",
+  "importPrice": 150000,
+  "retailPrice": 170000,
+  "category": "phoneCase",
+  "brand": "xiaomi",
+  "country": "china",
+  "creationDate": {
+    "$date": "2023-12-10T04:43:07.888Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657541f8822ea6bd250a20c9"
+  },
+  "barcode": "819159383",
+  "name": "Ốp lưng Galaxy A05s Nhựa dẻo TPU Samsung",
+  "importPrice": 161000,
+  "retailPrice": 190000,
+  "category": "phoneCase",
+  "brand": "samsung",
+  "country": "vietnam",
+  "creationDate": {
+    "$date": "2023-12-10T04:43:36.924Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575422c822ea6bd250a20cc"
+  },
+  "barcode": "443325722",
+  "name": "Ốp lưng Galaxy S23 FE Nhựa cứng PC Samsung",
+  "importPrice": 531000,
+  "retailPrice": 590000,
+  "category": "phoneCase",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T04:44:28.072Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65754929673cd10011d9f14b"
+  },
+  "barcode": "883693227",
+  "name": "Điện thoại Samsung Galaxy S23 Ultra 5G 256GB",
+  "importPrice": 25990000,
+  "retailPrice": 31990000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "usa",
+  "creationDate": {
+    "$date": "2023-12-10T05:14:17.528Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65754942673cd10011d9f14e"
+  },
+  "barcode": "272362368",
+  "name": "Điện thoại Samsung Galaxy A14 4GB",
+  "importPrice": 3190000,
+  "retailPrice": 4490000,
+  "category": "phone",
+  "brand": "samsung",
+  "country": "europe",
+  "creationDate": {
+    "$date": "2023-12-10T05:14:42.727Z"
+  },
+  "__v": 0
+}]

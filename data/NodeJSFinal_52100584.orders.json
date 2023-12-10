@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "6575d1c1daf0b73f3b49fd72"
+  },
+  "customer": {
+    "$oid": "6574538c709ae7924ec2d7d6"
+  },
+  "orderItems": [
+    {
+      "$oid": "6575d1c1daf0b73f3b49fd6b"
+    },
+    {
+      "$oid": "6575d1c1daf0b73f3b49fd6c"
+    }
+  ],
+  "total": 38950000,
+  "amountGiven": 40000000,
+  "creationDate": {
+    "$date": "2023-12-10T14:57:05.888Z"
+  },
+  "createdBy": {
+    "$oid": "6571d788a6da5d2ea143e799"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575d1fedaf0b73f3b49fdca"
+  },
+  "customer": {
+    "$oid": "6575d1fedaf0b73f3b49fdc1"
+  },
+  "orderItems": [
+    {
+      "$oid": "6575d1fedaf0b73f3b49fdc3"
+    },
+    {
+      "$oid": "6575d1fedaf0b73f3b49fdc4"
+    }
+  ],
+  "total": 93970000,
+  "amountGiven": 100000000,
+  "creationDate": {
+    "$date": "2023-12-10T14:58:06.419Z"
+  },
+  "createdBy": {
+    "$oid": "6571d788a6da5d2ea143e799"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6575db26a4f35176e45b806f"
+  },
+  "customer": {
+    "$oid": "6574538c709ae7924ec2d7d6"
+  },
+  "orderItems": [
+    {
+      "$oid": "6575db26a4f35176e45b8064"
+    },
+    {
+      "$oid": "6575db26a4f35176e45b8065"
+    },
+    {
+      "$oid": "6575db26a4f35176e45b8066"
+    },
+    {
+      "$oid": "6575db26a4f35176e45b8067"
+    }
+  ],
+  "total": 184820000,
+  "amountGiven": 200000000,
+  "creationDate": {
+    "$date": "2023-12-10T15:37:10.248Z"
+  },
+  "createdBy": {
+    "$oid": "6571d788a6da5d2ea143e799"
+  },
+  "__v": 0
+}]
