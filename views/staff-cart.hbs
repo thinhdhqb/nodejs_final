@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="/stylesheets/admin.css" />
+<link rel="stylesheet" href="/stylesheets/staff-cart.css" />
+
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="/staff"
+                class="nav-link py-3 border-bottom rounded-0 active"
+                title="Trang chủ"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-house-door"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/product"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/customer"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Khách hàng"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/staff/profile"
+            class="nav-link py-3 border-bottom rounded-0"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuất"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+<!-- Main -->
+<main class="px-md-4 vh-100 d-flex flex-column" style="max-height: 100vh;">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+    >
+        <h1 class="h2">Giỏ hàng</h1>
+        {{#if messages.error}}
+            <div
+                class="alert alert-danger alert-dismissible fade show m-0"
+                role="alert"
+            >
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                ></button>
+                {{messages.error}}
+            </div>
+        {{/if}}
+
+        <div class="d-flex">
+            <div class="text-primary">
+                <i class="bi bi-1-circle-fill"></i>
+                Giỏ hàng
+            </div>
+            <i class="text-secondary bi bi-dash-lg mx-3"></i>
+            <div class="text-secondary">
+                <i class="bi bi-2-circle-fill"></i>
+                Thanh toán
+            </div>
+            <i class="text-secondary bi bi-dash-lg mx-3"></i>
+            <div class="text-secondary">
+                <i class="bi bi-3-circle-fill"></i>
+                Hóa đơn
+            </div>
+        </div>
+    </div>
+    <div class="row flex-grow-1 gx-5">
+        <div class="col-7 d-flex flex-column">
+            <div class="d-flex mb-3">
+                <div class="w-100">
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="barcode"
+                        id="input-barcode"
+                        placeholder="Nhập barcode sản phẩm"
+                    />
+                </div>
+                <button
+                    id="btnAddProduct"
+                    class="btn btn-dark ms-2"
+                    style="text-wrap: nowrap;"
+                >Thêm sản phẩm</button>
+            </div>
+            <div class="w-100 mb-3">
+                <input
+                    type="text"
+                    class="form-control mb-3"
+                    name="product-name"
+                    id="input-product-name"
+                    placeholder="Tìm kiếm sản phẩm theo tên"
+                />
+            </div>
+            <div class="table-container">
+                <table class="table table-hover">
+                    <thead style="display: table">
+                        <th>Barcode</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                    </thead>
+                    <tbody id="tb-product-search" style="display: table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form
+            method="post"
+            class="col-5 h-100 border-start-1 border-start d-flex flex-column"
+        >
+            <h4 class="border-bottom border-bottom-1 pb-3"><i
+                    class="bi bi-cart"
+                ></i>
+                Giỏ hàng (<span id="current-quantity">0</span>)
+            </h4>
+            <div class="cart-item-container border-bottom border-bottom-1">
+                <div class="cart-item-list">
+                    {{#if cart}}
+                        {{#each cart.items}}
+                            <div
+                                class="d-flex py-3 align-items-center cart-item"
+                                data-barcode="{{barcode}}"
+                                data-price={{price}}
+                            >
+                                <input
+                                    type="hidden"
+                                    name="barcode"
+                                    value="{{barcode}}"
+                                />
+                                <div class="col-5">
+                                    <div class="fw-bold">{{name}}</div>
+                                    <div
+                                        class="text-secondary price"
+                                    >{{formatCurrencyVND price}}</div>
+                                </div>
+                                <div class="ms-auto col-3">
+                                    <i
+                                        class="bi bi-dash-circle-fill btn-minus"
+                                    ></i>
+                                    <input
+                                        type="number"
+                                        name="quantity"
+                                        class="quantity"
+                                        value="{{quantity}}"
+                                        min="1"
+                                    />
+                                    <i
+                                        class="bi bi-plus-circle-fill btn-plus"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="price text-large subtotal col-3 text-end"
+                                    data-price="{{subtotal}}"
+                                >{{formatCurrencyVND subtotal}}</div>
+                                <div class="btn-remove col-1 text-end"><i
+                                        class="bi bi-x-lg"
+                                    ></i></div>
+                            </div>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+            <div class="d-flex py-3 align-items-center">
+                <div class="fw-bold text-large">Tổng tiền</div>
+                {{#if cart}}
+                    <div
+                        class="ms-auto price text-xxl"
+                        id="total"
+                    >{{formatCurrencyVND cart.total}}</div>
+                {{else}}
+                    <div class="ms-auto price text-xxl" id="total">0₫</div>
+                {{/if}}
+            </div>
+            <button type="submit" class="btn btn-dark w-100 p-3 mb-3">THANH TOÁN</button>
+        </form>
+    </div>
+
+</main>
+<script src="/javascripts/admin.js"></script>
+<script src="/javascripts/staff-cart.js"></script>

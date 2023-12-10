@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="/stylesheets/admin.css" />
+<link rel="stylesheet" href="/stylesheets/staff-cart.css" />
+
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="/staff"
+                class="nav-link py-3 border-bottom rounded-0 active"
+                title="Trang chủ"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-house-door"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/product"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/customer"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Khách hàng"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/staff/profile"
+            class="nav-link py-3 border-bottom rounded-0"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuất"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+
+<!-- Main -->
+<main class="px-md-4 vh-100 d-flex flex-column" style="max-height: 100vh;">
+    <div
+        class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+    >
+        <h1 class="h2">Hóa đơn</h1>
+        <div class="d-flex ms-auto">
+            <div class="text-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                Giỏ hàng
+            </div>
+            <i class="text-secondary bi bi-dash-lg mx-3"></i>
+            <div class="text-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                Thanh toán
+            </div>
+            <i class="text-primary bi bi-dash-lg mx-3"></i>
+            <div class="text-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                Hóa đơn
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="w-100 d-flex flex-column align-items-center">
+                <i class="bi bi-check2-circle" style="font-size: 80px"></i>
+                <h3 class="mb-3">Thanh toán thành công !</h3>
+                <a href="/staff/cart" class="btn btn-outline-dark mb-3" style="width: 200px;">
+                    <i class="bi bi-cart-plus me-2"></i>
+                    Thêm đơn hàng mới
+                </a>
+                <button
+                    class="btn btn-dark mb-3"
+                    style="width: 200px;"
+                    id="btn-export"
+                >
+                    <i class="bi bi-file-earmark-pdf-fill me-2"></i>
+                    Xuất hóa đơn
+                </button>
+            </div>
+
+        </div>
+        <div class="col-lg-5">
+            <div class="d-flex flex-column align-items-center" id="invoice" style="font-family: 'Nunito Sans', sans-serif;">
+                {{#with order}}
+                    <div class="d-flex flex-column p-3">
+                        <div class="border-bottom border-bottom-1 py-3">
+                            <div>
+                                <i class="fa-solid fa-leaf"></i>
+                                Leafy
+                            </div>
+                            <div
+                                class="w-100 text-center text-larger fw-bold mb-3"
+                            >HÓA ĐƠN THANH TOÁN</div>
+                            <div class="row">
+                                <span class="col-6 text-secondary">Tên khách
+                                    hàng</span>
+                                <span
+                                    class="col-6 text-large text-end"
+                                >{{customer.fullName}}</span>
+                            </div>
+                            <div class="row">
+                                <span class="col-6 text-secondary">Số điện thoại</span>
+                                <span
+                                    class="col-6 text-end"
+                                >{{customer.phoneNumber}}</span>
+                            </div>
+                            <div class="row">
+                                <span class="col-6 text-secondary">Địa chỉ</span>
+                                <span
+                                    class="col-6 text-end"
+                                >{{customer.address}}</span>
+                            </div>
+                            <div class="row">
+                                <span class="col-6 text-secondary">Ngày xuất hóa
+                                    đơn</span>
+                                <span class="col-6 text-end">{{formatDateAndTime
+                                        creationDate
+                                    }}</span>
+                            </div>
+                            <div class="row">
+                                <span class="col-6 text-secondary">Nhân viên lập
+                                    hóa đơn</span>
+                                <span
+                                    class="col-6 text-end"
+                                >{{createdBy.fullName}}</span>
+                            </div>
+                        </div>
+                        <div
+                            class="cart-item-container border-bottom border-bottom-1"
+                        >
+                            {{#each orderItems}}
+                                <div class="d-flex py-3 align-items-center">
+                                    <div class="col-5">
+                                        <div
+                                            class="fw-bold"
+                                        >{{product.name}}</div>
+                                        <div
+                                            class="text-secondary price"
+                                        >{{formatCurrencyVND
+                                                product.retailPrice
+                                            }}</div>
+                                    </div>
+                                    <div class="ms-auto col-3">
+                                        Số lượng:
+                                        {{quantity}}
+                                    </div>
+                                    <div
+                                        class="price text-large col-4 text-end"
+                                    >{{formatCurrencyVND subtotal}}</div>
+                                </div>
+                            {{/each}}
+                        </div>
+                        <div class="d-flex py-3 align-items-center">
+                            <div class="fw-bold text-large">Tổng tiền</div>
+                            <div
+                                class="ms-auto price text-xxl"
+                                id="total"
+                            >{{formatCurrencyVND total}}</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="fw-bold text">Tiền khách gửi</div>
+                            <div
+                                class="ms-auto price text-large"
+                            >{{formatCurrencyVND amountGiven}}</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="fw-bold">Tiền trả lại</div>
+                            <div
+                                class="ms-auto price text-large"
+                            >{{formatCurrencyVND (min amountGiven total)}}</div>
+                        </div>
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="/javascripts/html2canvas.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+></script>
+<script src="/javascripts/html2PDF.js"></script>
+
+<script type="module" src="/javascripts/font/NoticiaText-Regular-normal.js"></script>
+
+<script src="/javascripts/admin.js"></script>
+<script type="module" src="/javascripts/staff-cart-invoice.js"></script>

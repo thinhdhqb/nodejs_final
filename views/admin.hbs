@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/stylesheets/admin.css">
+
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0 active"
+                title="Trang chủ"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-house-door"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Orders"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-file-text"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/admin/product"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/admin/employee"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Nhân viên"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/admin/profile"
+            class="nav-link py-3 border-bottom rounded-0"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href=""
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuâtts"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+
+<!-- Main -->
+<main class="px-md-4">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+    >
+        <h1 class="h2">Trang chủ</h1>
+    </div>
+
+
+</main>
+<script src="/javascripts/admin.js"></script>

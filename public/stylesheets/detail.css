@@ -1,0 +1,36 @@
+.size-card {
+    border: solid 1px lightgray;
+    border-radius: 2px;
+    text-align: center;
+    margin-right: 4px;
+    display: inline-block;
+    padding: 5px;
+    width: 80px;
+}
+
+.size-card:hover {
+    cursor: pointer;
+    border-color: black;
+}
+
+.selected {
+    cursor: pointer;
+    border-color: black;
+}
+
+.size-card.disabled {
+    color: lightgray;
+    background-color: rgb(240, 240, 240);
+}
+
+.color-img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+}
+
+.color-img:hover {
+    cursor: pointer;
+    border-color: black;
+}
+

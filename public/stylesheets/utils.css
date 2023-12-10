@@ -1,0 +1,27 @@
+.text-large {
+    font-size: large;
+}
+
+.text-larger {
+    font-size: larger;
+}
+
+.text-small {
+    font-size: small;
+}
+
+.text-smaller {
+    font-size: smaller;
+}
+
+.text-xl {
+    font-size: x-large;
+}
+
+.text-xxl {
+    font-size: xx-large;
+}
+
+.text-normal {
+    font-size:medium;
+}

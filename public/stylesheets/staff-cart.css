@@ -1,0 +1,47 @@
+.quantity {
+    display: inline-block;
+    min-width: 40px;
+    max-width: 60px;
+}
+
+.cart-item-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.cart-item-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.product-row:hover {
+    cursor: pointer;
+}
+
+.btn-minus:hover, .btn-plus:hover, .btn-remove:hover {
+    cursor: pointer;
+}
+
+.table-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+table {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+thead, tbody {
+    width: 100%;
+}

@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<!-- Main Container -->
+<div class="main-container container pt-3 h-100">
+    <form class="mb-3 auth-form-container" id="account" method="post">
+        <h2>Đăng nhập</h2>
+        <div class="text-danger">{{ messages.error.[0] }}</div>
+        <div class="mb-3 form-floating">
+            <input type="text"
+                   class="form-control"
+                   id="input-username"
+                   name="username"
+                   autocomplete="username" aria-required="true"
+                   required
+                   placeholder="" />
+            <label for="input-username" class="form-label">Tên đăng nhập</label>
+        </div>
+        <div class="mb-3 form-floating">
+            <input type="password"
+                   class="form-control"
+                   id="input-password"
+                   name="password"
+                   required
+                   placeholder="Vui lòng nhập mật khẩu" />
+            <label for="input-password" class="form-label">Mật khẩu</label>
+        </div>
+        <div class="checkbox">
+        <button class="btn btn-dark w-100 p-3 mb-3" id="login-submit" type="submit">Đăng nhập</button>
+    </form>
+
+    <!-- List container -->
+</div>
+<!-- Main Container -->

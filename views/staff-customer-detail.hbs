@@ -1,0 +1,181 @@
+<link rel="stylesheet" href="/stylesheets/admin.css" />
+
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="/staff"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Trang chủ"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-house-door"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/product"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/customer"
+                class="nav-link py-3 border-bottom rounded-0 active"
+                title="Khách hàng"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/staff/profile"
+            class="nav-link py-3 border-bottom rounded-0"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuất"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+
+<!-- Main -->
+<main class="px-md-4">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+    >
+        <h1 class="h2">Khách hàng</h1>
+    </div>
+    <a
+        href="/staff/customer"
+        class="link-primary link-underline link-underline-opacity-0 d-block mb-3"
+    ><i class="bi bi-chevron-left me-2"></i>Quay lại trang trước</a>
+    <h3>Thông tin khách hàng</h3>
+   
+    <div class="row">
+        <div class="col-4">
+            <div class="mb-3">
+                <div>Tên khách hàng</div>
+                <div class="text-secondary">{{customer.fullName}}</div>
+            </div>
+            <div class="mb-3">
+                <div>Số điện thoại</div>
+                <div class="text-secondary">{{customer.phoneNumber}}</div>
+            </div>
+            <div class="mb-3">
+                <div>Địa chỉ</div>
+                <div class="text-secondary">{{customer.address}}</div>
+            </div>
+        </div>
+        <div class="col-4">
+            
+        </div>
+    </div>
+    
+  
+
+    <h3>Lịch sử mua hàng</h3>
+    <table class="table table-hover w-100 align-middle">
+    <colgroup>
+        <col span="1" style="width: 0%; min-width: 40px" />
+        <col span="1" style="width: 0%; min-width: 40px" />
+        <col span="1" style="width: 0%; min-width: 100px" />
+        <col span="1" style="width: 0%; min-width: 100px" />
+        <col span="1" style="width: 0%; min-width: 100px" />
+        <col span="1" style="width: 0%; min-width: 100px" />
+        <col span="1" style="width: 0%; min-width: 100px" />
+        <col span="1" style="width: 0%; min-width: 100px" />
+    </colgroup>
+
+    <thead class="text-uppercase">
+        <th>STT</th>
+        <th>Mã đơn hàng</th>
+        <th>Thời gian tạo</th>
+        <th>Sản phẩm</th>
+        <th>Tổng tiền</th>
+        <th>Tiền nhận</th>
+        <th>Tiền trả lại</th>
+    </thead>
+    <tbody class="table-group-divider">
+        {{#each orderList}}
+            <tr class="orderEach">
+                <form class="formOrderId" action="/staff/customer/detail/order", method="post">
+                    <input name="orderId" type="hidden" value="{{_id}}">
+                    
+                </form>
+                <td>
+                    {{increment @index}}
+                <td>
+                    <a onclick="$(".formOrderId").submit();" class="link-underline link-underline-opacity-0">
+                    {{_id}}
+                    </a>
+                </td>
+                <td>
+                        {{formatDateAndTime creationDate}}
+                </td>
+                <td>
+                    {{#each orderItems}}
+                        <span>x{{quantity}} {{product.name}}</span>
+                        <br>
+                    {{/each}}
+                </td>
+                <td>
+                    {{formatCurrencyVND total}}
+                </td>
+                <td>
+                    {{formatCurrencyVND amountGiven}}
+                </td>
+                <td>
+                    {{formatCurrencyVND (min amountGiven total)}}
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+</main>
+
+<script>
+    $(document).ready(function(){
+        $(".orderEach").on("click", function(){
+            var formInputValue = $(this).find('form');
+            formInputValue.submit()
+            //console.log(inputValue)
+        })
+    })
+</script>

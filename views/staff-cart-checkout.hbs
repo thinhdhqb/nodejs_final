@@ -1,0 +1,303 @@
+<link rel="stylesheet" href="/stylesheets/admin.css" />
+<link rel="stylesheet" href="/stylesheets/staff-cart.css" />
+
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="/staff"
+                class="nav-link py-3 border-bottom rounded-0 active"
+                title="Trang chủ"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-house-door"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/product"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/staff/customer"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Khách hàng"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/staff/profile"
+            class="nav-link py-3 border-bottom rounded-0"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuất"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+
+<!-- Main -->
+<main class="px-md-4 vh-100 d-flex flex-column" style="max-height: 100vh;">
+    <div
+        class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+    >
+        <h1 class="h2">Giỏ hàng</h1>
+        {{#if messages.error}}
+            <div
+                class="alert alert-danger alert-dismissible fade show m-0 ms-3"
+                role="alert"
+            >
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                ></button>
+                {{messages.error.[0]}}
+            </div>
+        {{/if}}
+        <div class="d-flex ms-auto">
+            <div class="text-primary">
+                <i class="bi bi-check-circle-fill"></i>
+                Giỏ hàng
+            </div>
+            <i class="text-secondary bi bi-dash-lg mx-3"></i>
+            <div class="text-primary">
+                <i class="bi bi-2-circle-fill"></i>
+                Thanh toán
+            </div>
+            <i class="text-secondary bi bi-dash-lg mx-3"></i>
+            <div class="text-secondary">
+                <i class="bi bi-3-circle-fill"></i>
+                Hóa đơn
+            </div>
+        </div>
+    </div>
+    <div class="row flex-grow-1 gx-5">
+        <div class="col-7">
+            <div class="mb-3">
+                <a
+                    href="/staff/cart"
+                    class="link-underline link-underline-opacity-0"
+                ><i class="bi bi-chevron-left me-2"></i> Quay lại giỏ hàng</a>
+            </div>
+            <form class="mb-3" method="post">
+                <h4>Thông tin khách hàng
+                    <div
+                        class="text-success text-normal d-inline-block d-none"
+                        id="success-text"
+                    ><i class="bi bi-check-lg me-2"></i>Tìm thấy khách hàng
+                    </div>
+                    <div
+                        class="text-danger text-normal d-inline-block d-none"
+                        id="failure-text"
+                    ><i class="bi bi-x me-2"></i>Không tìm thấy khách hàng
+                    </div></h4>
+                <div class="form-floating mb-3">
+                    <input
+                        type="number"
+                        maxlength="10"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        class="form-control"
+                        name="phone"
+                        id="input-phone"
+                        placeholder=""
+                        required
+                    />
+                    <label for="input-phone">Số điện thoại (e.g. 0923123123)</label>
+                    <div class="invalid-feedback">
+                        Vui lòng nhập số điện thoại có đủ 10 chữ số.
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="fullName"
+                        id="input-fullname"
+                        placeholder=""
+                        required
+                    />
+                    <label for="input-fullname">Họ tên</label>
+                </div>
+                <div class="form-floating mb-3 d-none" id="found-address">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="input-found-address"
+                        placeholder=""
+                    />
+                    <label for="input-found-address">Địa chỉ</label>
+                </div>
+                <div id="new-address">
+                    <div class="form-floating mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="numberStreet"
+                            id="input-numberStreet"
+                            placeholder=""
+                        />
+                        <label for="input-numberStreet">Địa chỉ (e.g. 19 Nguyễn
+                            Hữu Thọ)</label>
+                    </div>
+                    <div class="row gx-1 mb-3">
+                        <div class="col-4 form-floating">
+                            <select
+                                class="form-select"
+                                name="city"
+                                required
+                                id="select-city"
+                            >
+                            </select>
+                            <label for="select-city" class="form-label">Tỉnh /
+                                Thành phố</label>
+                        </div>
+                        <div class="col-4 form-floating">
+                            <select
+                                class="form-select"
+                                name="district"
+                                disabled
+                                required
+                                id="select-district"
+                            >
+                            </select>
+                            <label for="select-district" class="form-label">Quận
+                                / Huyện</label>
+
+                        </div>
+                        <div class="col-4 form-floating">
+                            <select
+                                class="form-select"
+                                name="ward"
+                                disabled
+                                required
+                                id="select-ward"
+                            >
+                            </select>
+                            <label for="select-ward" class="form-label">Phường /
+                                Xã</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Thông tin thanh toán</h4>
+                <div class="form-floating mb-3">
+                    <input
+                        type="hidden"
+                        name="amountGiven"
+                        id="input-amountGiven"
+                    />
+                    <input
+                        type="text"
+                        class="form-control is-invalid"
+                        id="input-amount"
+                        placeholder=""
+                        required
+                    />
+                    <div class="valid-feedback">
+                        Giá trị hợp lệ !
+                    </div>
+                    <div class="invalid-feedback">
+                        Tiền khách gửi phải lớn hơn tổng tiền đơn hàng.
+                    </div>
+
+                    <label for="input-amount">Số tiền khách hàng gửi</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="input-change"
+                        placeholder=""
+                        disabled
+                    />
+                    <label for="input-change">Số tiền trả lại</label>
+                </div>
+                <button type="submit" class="btn btn-dark w-100 p-3 mb-3">XÁC
+                    NHẬN THANH TOÁN</button>
+            </form>
+        </div>
+        <form
+            class="col-5 h-100 border-start-1 border-start d-flex flex-column"
+        >
+            <h4 class="border-bottom border-bottom-1 pb-3"><i
+                    class="bi bi-cart"
+                ></i>
+                Giỏ hàng ({{cart.items.length}})</h4>
+            <div class="cart-item-container border-bottom border-bottom-1">
+                <div class="cart-item-list">
+                    {{#each cart.items}}
+                        <div class="d-flex py-3 align-items-center">
+                            <div class="col-5">
+                                <div class="fw-bold">{{name}}</div>
+                                <div
+                                    class="text-secondary price"
+                                >{{formatCurrencyVND price}}</div>
+                            </div>
+                            <div class="ms-auto col-3">
+                                Số lượng:
+                                {{quantity}}
+                            </div>
+                            <div
+                                class="price text-large col-4 text-end"
+                            >{{formatCurrencyVND subtotal}}</div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="d-flex py-3 align-items-center">
+                <div class="fw-bold text-large">Tổng tiền</div>
+                <div
+                    class="ms-auto price text-xxl"
+                    id="total"
+                    data-value="{{cart.total}}"
+                >{{formatCurrencyVND cart.total}}</div>
+            </div>
+        </form>
+    </div>
+
+</main>
+<script src="/javascripts/admin.js"></script>
+<script src="/javascripts/address.js"></script>
+<script src="/javascripts/staff-cart-checkout.js"></script>

@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="/stylesheets/admin.css" />
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="/admin/product"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/admin/employee"
+                class="nav-link py-3 border-bottom rounded-0 "
+                title="Nhân viên"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/admin/reporting"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Thống kê"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="fa-solid fa-chart-simple"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/admin/profile"
+            class="nav-link py-3 border-bottom rounded-0 active"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuất"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+
+<!-- Main -->
+<main class="px-md-4">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+    >
+        <h1 class="h2">Hồ sơ</h1>
+    </div>
+
+    <div class="row gx-4">
+        <div class="col-4">
+            <div class="fw-bold text-large mb-3">Ảnh đại diện</div>
+            <div class="mb-3">
+                <img
+                    src="/images/{{user.profileImg}}"
+                    class="rounded"
+                    style="width: 100%; aspect-ratio: 1 / 1;"
+                    alt=""
+                />
+            </div>
+            <div class="d-flex flex-column align-items-center w-100">
+                <a id="change-profile-img" class="link-underline link-underline-opacity-0 link-underline-primary mb-3"><i class="bi bi-pencil-fill"></i> Thay ảnh đại diện</a>
+                <form method="post" action="/admin/profile/changeProfileImage" class="mb-3 d-none d-flex flex-column align-items-center" id="form-profile-image" enctype="multipart/form-data">
+                    <input
+                        type="file"
+                        class="form-control mb-3"
+                        name="image"
+                        accept="image/*"
+                        placeholder=""
+                    />
+                    <div class="form-text">Chọn ảnh đại diện. Chỉ chấp nhận các định dạng .png, .jpg, .jpeg, .gif..</div>
+                    <button class="btn-primary btn" type="submit">Lưu ảnh đại diện</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <div class="fw-bold text-large">Họ tên</div>
+                <div class="text-secondary">Quản trị viên</div>
+            </div>
+            <form action="/admin/profile/changePassword" method="post" class="mb-3">
+                <div class="fw-bold text-large mb-3">Đổi mật khẩu</div>
+                <div class="text-success">{{ messages.success }}</div>
+                <div class="text-danger">{{ messages.error }}</div>
+                <div class="form-floating mb-3">
+                    <input
+                        type="password"
+                        class="form-control"
+                        name="currentPassword"
+                        id="input-current-password"
+                        placeholder=""
+                        required
+                    />
+                    <label for="input-current-password">Mật khẩu hiện tại</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input
+                        type="password"
+                        class="form-control"
+                        name="newPassword"
+                        id="input-new-password"
+                        required
+                        placeholder=""
+                    />
+                    <label for="input-new-password">Mật khẩu mới</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input
+                        type="password"
+                        class="form-control"
+                        name="confirmPassword"
+                        id="input-confirm-password"
+                        required
+                        placeholder=""
+                    />
+                    <label for="input-confirm-password">Xác nhận mật khẩu mới</label>
+                </div>
+                <button class="btn btn-dark w-100 p-3" type="submit">Cập nhật mật khẩu</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/javascripts/admin.js"></script>
+<script>
+    $('#change-profile-img').click(function() {
+        $('#form-profile-image').toggleClass('d-none');
+    })
+</script>

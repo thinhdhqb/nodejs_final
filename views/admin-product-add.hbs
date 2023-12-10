@@ -1,0 +1,165 @@
+<link rel="stylesheet" href="/stylesheets/admin.css" />
+<!-- Sidebar -->
+<div
+    class="d-flex flex-column flex-shrink-0 bg-light sidebar"
+    style="width: 4.5rem;"
+>
+    <a
+        href="/"
+        class="d-block p-3 link-dark text-decoration-none text-center"
+        title="Leafy"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+    >
+        <i class="fa-solid fa-leaf"></i>
+        <span class="visually-hidden">Leafy</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li>
+            <a
+                href="/admin/product"
+                class="nav-link py-3 border-bottom rounded-0 active"
+                title="Sản phẩm"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-cart"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/admin/employee"
+                class="nav-link py-3 border-bottom rounded-0 "
+                title="Nhân viên"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="bi bi-people"></i>
+            </a>
+        </li>
+        <li>
+            <a
+                href="/admin/reporting"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Thống kê"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+            >
+                <i class="fa-solid fa-chart-simple"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="text-center">
+        <a
+            href="/admin/profile"
+            class="nav-link py-3 border-bottom rounded-0"
+            title="Hồ sơ"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+        >
+            <i class="bi bi-person-circle"></i>
+        </a>
+        <form action="/auth/logout" method="post">
+            <a
+                href="#"
+                class="nav-link py-3 border-bottom rounded-0"
+                title="Đăng xuất"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                onclick="this.parentNode.submit()"
+            >
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </form>
+    </div>
+</div>
+
+<main>
+    <div class="px-md-4" style="width: 800px">
+        <div>
+            <div>
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Sản phẩm</h1>
+                </div>
+                <a href="/admin/product" class="link-primary link-underline link-underline-opacity-0 d-block mb-3"><i
+                        class="bi bi-chevron-left me-2"></i>Quay lại trang trước</a>
+                <h3>Thêm sản phẩm</h3>
+                <div>
+                    {{#if error}}
+                    <div class="alert alert-danger" role="alert">
+                        {{error}}
+                    </div>
+                    {{/if}}
+                    {{#if message}}
+                    <div class="alert alert-success" role="alert">
+                        {{message}}
+                    </div>
+                    {{/if}}
+                    <form action="/admin/product/add" class="row gx-1" method="post">
+                        <div class="mb-3 form-floating col-12">
+                            <input type="text" class="form-control" id="product-name" name="name" placeholder="" />
+                            <label for="product-name" class="form-label">Tên sản phẩm</label>
+                        </div>
+                        <div class="mb-3 form-floating col-6">
+                            <input type="number" class="form-control" id="product-import-price" name="importPrice"
+                                placeholder="" />
+                            <label for="product-import-price" class="form-label">Giá nhập khẩu</label>
+                        </div>
+
+                        <div class="mb-3 form-floating col-6">
+                            <input type="number" class="form-control" id="product-retail-price" name="retailPrice"
+                                placeholder="" />
+                            <label for="product-retail-price" class="form-label">Giá bán lẻ</label>
+                        </div>
+
+                        <div class="mb-3 form-floating col-4">
+                            <select class="form-select" id="product-brand" name="brand">
+                                <option value="" selected>Chọn hãng</option>
+                                <option value="apple">Apple</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="xiaomi">Xiaomi</option>
+                            </select>
+                            <label for="product-brand" class="form-label">Hãng</label>
+                        </div>
+
+                        <div class="mb-3 col-4 form-floating">
+                            <select class="form-select" id="product-country" name="country">
+                                <option value="" selected>Chọn xuất sứ</option>
+                                <option value="vietnam">Việt Nam</option>
+                                <option value="china">Trung Quốc</option>
+                                <option value="usa">Mỹ</option>
+                                <option value="europe">Châu Âu</option>
+                            </select>
+                            <label for="product-country" class="form-label">Xuất sứ</label>
+                        </div>
+                        <div class="mb-3 col-4 form-floating">
+                            <select class="form-select" id="product-category" name="category">
+                                <option value="" selected>Chọn phân loại</option>
+                                <option value="phone">
+                                    Điện thoại
+                                </option>
+                                <option value="earphone">
+                                    Tai nghe
+                                </option>
+                                <option value="charger">
+                                    Sạc điện thoại
+                                </option>
+                                <option value="phoneCase">
+                                    Ốp lưng
+                                </option>
+                            </select>
+                            <label for="product-category" class="form-label">Phân loại</label>
+                        </div>
+                        <div style="display: flex;
+                            align-items: center;
+                            justify-content: center;">
+                            <button type="submit" class="btn btn-dark" style="width: 120px">Thêm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/javascripts/admin.js"></script>
