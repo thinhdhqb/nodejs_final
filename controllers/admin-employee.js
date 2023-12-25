@@ -193,7 +193,7 @@ async function sendActivationMail (gmail, username, fullName) {
     from: "Leafy",
     html: emailTemplate({
       fullName,
-      link: `http://localhost:3000/auth/login?token=${token}`,
+      link: `https://nodejs-final-iu8e.onrender.com/auth/login?token=${token}`,
     }),
     subject: "Leafy - Liên kết đăng nhập",
     to: gmail,
